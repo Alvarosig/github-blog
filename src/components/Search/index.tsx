@@ -1,6 +1,11 @@
+import { ChangeEvent } from "react"
 import { useContent } from "../../contexts/ContentContext"
 
-export function Search() {
+interface SearchProps {
+  onSearchChange: (event: ChangeEvent<HTMLInputElement>) => void
+}
+
+export function Search({ onSearchChange }: SearchProps) {
   const { posts } = useContent()
   
   return (
@@ -16,7 +21,8 @@ export function Search() {
         <input
           className="flex-1 bg-base-input px-4 py-3 rounded-md ring-1 ring-base-border outline-none focus:ring-blue placeholder:text-base-label"
           placeholder="Buscar conteúdo"
-          type="text"
+          type="search"
+          onChange={onSearchChange}
         />
       </form>
     </div>
