@@ -3,9 +3,9 @@ import { MarkDownContent } from "../../components/MarkDownContent";
 
 export function Post() {
   return (
-    <>
+    <div>
       <DataVisor />
       <MarkDownContent />
-    </>
+    </div>
   )
 }

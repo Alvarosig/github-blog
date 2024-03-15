@@ -12,8 +12,8 @@ export function MarkDownContent() {
   )
 
   return (
-    <div className="xl:px-72">
-      <div className="px-8 py-10">
+    <div className="xl:px-72 lg:px-48 md:px-32 sm:px-5">
+      <div className="px-8 py-10 whitespace-normal text-wrap">
         <Markdown
           remarkPlugins={[remarkGfm]}
           components={{
@@ -33,7 +33,7 @@ export function MarkDownContent() {
               <p {...props} className="text-base-text my-2 leading-[160%]" />
             ),
             code: ({...props}) => (
-              <code {...props} className="text-white p-1 bg-[#4F6173] rounded-sm leading-[160%] my-1" />
+              <code {...props} className="text-white p-1 bg-[#4F6173] rounded-sm leading-[160%] my-1 break-words" />
             ),
             ul: ({...props}) => (
               <ul {...props} className="ml-12 list-disc" />

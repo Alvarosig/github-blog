@@ -11,10 +11,10 @@ export function Blog() {
   }
 
   return (
-    <>
+    <div className="max-xl:px-32 max-md:px-20 max-sm:px-8">
       <Summary />
       <Search onSearchChange={handleSearchChange}/>
       <Card searchTerm={searchTerm}/>
-    </>
+    </div>
   )
 }

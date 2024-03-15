@@ -20,7 +20,7 @@ export function Card({ searchTerm }: CardProps) {
   }
 
   return (
-    <div className="flex gap-8 flex-wrap xl:px-72 w-full mb-40">
+    <div className="flex gap-8 flex-wrap xl:px-72 w-full mb-40 max-lg:justify-center">
       {filteredPosts?.map((post) => {
         const postNumber = post.number
         return (
@@ -30,7 +30,7 @@ export function Card({ searchTerm }: CardProps) {
             onClick={() => handleCardClick(postNumber)}
           >
             <div className="flex items-start gap-4">
-              <h3 className="font-bold text-base-title text-xl">
+              <h3 className="font-bold text-base-title text-xl max-md:text-lg">
                 {post.title}
               </h3>
               <span className="font-normal text-base-span text-sm whitespace-nowrap">
@@ -41,7 +41,7 @@ export function Card({ searchTerm }: CardProps) {
               </span>
             </div>
 
-            <p className="font-normal text-base text-base-text whitespace-normal line-clamp-2">
+            <p className="font-normal text-base max-md:text-sm text-base-text whitespace-normal line-clamp-2 max-sm:line-clamp-3">
               {post.body}
             </p>
           </button>

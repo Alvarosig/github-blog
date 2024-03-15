@@ -12,16 +12,16 @@ export function Summary() {
 
   return (
     <section className="xl:px-72 -mt-[100px]">
-      <header className="p-8 flex gap-8 rounded-[10px] bg-base-profile items-center shadow-xl mb-[72px] relative">
+      <header className="p-8 flex max-md:flex-col gap-8 rounded-[10px] bg-base-profile items-center shadow-xl mb-[72px] relative">
         <img
           src={userData?.avatar_url}
-          className="size-[148px] object-cover rounded-lg"
+          className="size-[148px] max-lg:size-36 object-cover rounded-lg"
         />
 
         <div className="flex flex-col gap-6 flex-1">
           <div className="flex flex-col gap-2">
-            <div className="flex items-center justify-between">
-              <h2 className="font-bold text-2xl text-base-title">
+            <div className="flex max-sm:flex-col items-center justify-between">
+              <h2 className="font-bold text-2xl max-lg:text-xl text-base-title">
                 {userData?.name}
               </h2>
               {userData?.html_url && (
@@ -30,7 +30,7 @@ export function Summary() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="flex items-center gap-2 font-bold text-blue cursor-pointer hover:border-b-2 hover:border-blue transition ease-linear delay-0">
+                  <span className="flex items-center gap-2 font-bold text-blue max-lg:text-sm cursor-pointer hover:border-b-2 hover:border-blue transition ease-linear delay-0">
                     GITHUB
                     <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                   </span>
@@ -38,10 +38,10 @@ export function Summary() {
               )}
             </div>
 
-            <p className="text-base text-base-text">{userData?.bio}</p>
+            <p className="text-base text-base-text max-lg:text-sm">{userData?.bio}</p>
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-6 max-md:justify-center">
             <div className="flex gap-2 items-center">
               <FontAwesomeIcon
                 icon={faGithub}
@@ -67,7 +67,7 @@ export function Summary() {
                 size="1x"
                 className="text-base-label"
               />
-              <span className="text-base text-base-subtitle">
+              <span className="text-base text-base-subtitle whitespace-nowrap">
                 {userData?.followers} seguidores
               </span>
             </div>

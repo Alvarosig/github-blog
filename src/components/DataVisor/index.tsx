@@ -17,7 +17,7 @@ export function DataVisor() {
   const { issueNumber } = useParams()
 
   return (
-    <section className="xl:px-72 -mt-[100px]">
+    <section className="xl:px-72 lg:px-48 md:px-32 sm:px-5 -mt-[100px]">
       {posts?.items.map((item) => {
         if (item.number.toString() === issueNumber) {
           return (
@@ -48,7 +48,7 @@ export function DataVisor() {
                     {item.title}
                   </h2>
 
-                  <div className="flex items-center gap-8">
+                  <div className="flex max-sm:flex-col max-sm:gap-2 max-sm:items-start items-center gap-8">
                     <div className="flex gap-2 items-center">
                       <FontAwesomeIcon
                         icon={faGithub}
